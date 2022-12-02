@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock Paper Scissors</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
@@ -13,24 +14,39 @@
     <h3>Your choice</h3>
   </header>
 <div class="choices">
-    <div class="choice">
-      <img src="./images/rock.png" alt="rock">
-      <button id="rock">Rock</button>
-    </div>
-    <div class="choice">
-      <img src="./images/paper.png" alt="paper">
-      <button id="paper">Paper</button>
-    </div>
-    <div class="choice">
-      <img src="./images/scissor.png" alt="scissor">
-      <button id="scissor">Scissor</button>
-    </div>
-
+  <div class ="rock">
+    <img src="./images/rock.png" alt="rock">
+    <button id="rock">Rock</button>
   </div>
-<div class="scores">
-  <div class="score you">You</div>
-  <div class="score computer">Computer</div>
+  <div class="paper">
+        <img src="./images/paper.png" alt="paper">
+        <button id="paper">Paper</button>
+  </div>
+  <div class="scissor">
+    <img src="./images/scissor.png" alt="scissor">
+    <button id="scissor">Scissor</button>
+  </div>
 </div>
-  
+<div class="choice">
+  <div id="you">You
+    <div id="youChose"></div>
+  </div>
+  <div id="computerChoice">Computer
+    <div id="computerChose"></div>
+  </div>
+ </div>
+  <div class="score">Score
+   <div class="players">
+     <div  id="you">You
+      <div id ="yourScore">0</div>
+     </div>
+     <div  id="computer">Computer
+      <div id ="computerScore">0</div>
+    </div>
+  </div>
+ </div>
+ <div class="result">Result</div>
+</div>
+
 </body>
 </html>
