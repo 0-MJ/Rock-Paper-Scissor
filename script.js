@@ -45,34 +45,222 @@ function getComputerChoice(){
  let playerScore = 0;
  let computerScore = 0;
 
- let playScoreDisplay = document.getElementById('yourScore');
- playScoreDisplay.addEventListener('click',function(){
-    playScoreDisplay.innerHTML = playerScore;
- })
- let computerScoreDisplay = document.getElementById('computerScore');
- computerScoreDisplay.addEventListener('click',function(){
-    computerScoreDisplay.innerHTML = computerScore;
- })
-
-
-  //Game Logic//
+//Game Logic//
 function gameLogic(playerSelection,computerSelection){
  if(playerSelection===computerSelection){ 
 
- }    
+//Score Display//
+let playScoreDisplay = document.getElementById('yourScore');
+playScoreDisplay.innerHTML = playerScore;
+
+let computerScoreDisplay = document.getElementById('computerScore');
+computerScoreDisplay.innerHTML = computerScore;
+
+//Results//
+
+let result = document.getElementById('result');
+result.innerHTML = "Round ends in a Draw"
+
+if((playerScore=='5')&&(computerScore!== '5')){
+         playerScore = 0;
+         computerScore = 0;
+         result.innerHTML = "You won the Game"
+}
+else if((playerScore== '5')&&(computerScore=='5')){
+        playerScore = 0;
+        computerScore = 0;
+        result.innerHTML = " Game ends in a Draw"
+}
+else if ((playerScore!== '5')&&(computerScore== '5')){
+        playerScore = 0;
+        computerScore = 0;
+        result.innerHTML = " Computer Won the Game"
+   
+ } 
+}   
+//player chooses Rock//
+ else if ((playerSelection ==="Rock")&&(computerSelection==="Scissor")){
+     playerScore ++;
+//Score Display//
+  let playScoreDisplay = document.getElementById('yourScore');
+  playScoreDisplay.innerHTML = playerScore;
+
+  let computerScoreDisplay = document.getElementById('computerScore');
+  computerScoreDisplay.innerHTML = computerScore;
+
+//Results//
+let result = document.getElementById('result');
+result.innerHTML = "You Won this round"
+if((playerScore=='5')&&(computerScore!== '5')){
+        playerScore = 0;
+        computerScore = 0;
+        result.innerHTML = "You won the Game"
+}
+else if((playerScore== '5')&&(computerScore=='5')){
+       playerScore = 0;
+       computerScore = 0;
+       result.innerHTML = " Game ends in a Draw"
+}
+else if ((playerScore!== '5')&&(computerScore== '5')){
+       playerScore = 0;
+       computerScore = 0;
+       result.innerHTML = " Computer Won the Game"
+  
+} 
+
+ } 
+ else if ((playerSelection ==="Rock")&&(computerSelection==="Paper")){
+        computerScore++;
+ //Score Display//
+ let playScoreDisplay = document.getElementById('yourScore');
+ playScoreDisplay.innerHTML = playerScore;
+
+ let computerScoreDisplay = document.getElementById('computerScore');
+ computerScoreDisplay.innerHTML = computerScore;
+
+ //Results//
+let result = document.getElementById('result');
+result.innerHTML = "Computer Won this round"
+if((playerScore=='5')&&(computerScore!== '5')){
+        playerScore = 0;
+        computerScore = 0;
+        result.innerHTML = "You won the Game"
+}
+else if((playerScore== '5')&&(computerScore=='5')){
+       playerScore = 0;
+       computerScore = 0;
+       result.innerHTML = " Game ends in a Draw"
+}
+else if ((playerScore!== '5')&&(computerScore== '5')){
+       playerScore = 0;
+       computerScore = 0;
+       result.innerHTML = " Computer Won the Game"
+  
+} 
+       
+ }
 //player chooses scissor//
-else if ((playerSelection ==="rock")&&(computerSelection==="scissor")){
-     playerScore ++;} 
-else if ((playerSelection ==="rock")&&(computerSelection==="paper")){
-        computerScore++;}
-//player chooses scissor//
-else if ((playerSelection === "Scissor")&&(computerSelection==="Paper")){
-        playerScore ++;}
-else if ((playerSelection === "scissor")&&(computerSelection==="rock")){
-        computerScore++;}
+ else if ((playerSelection === "Scissor")&&(computerSelection==="Paper")){
+        playerScore ++;
+//Score Display//
+let playScoreDisplay = document.getElementById('yourScore');
+playScoreDisplay.innerHTML = playerScore;
+
+let computerScoreDisplay = document.getElementById('computerScore');
+computerScoreDisplay.innerHTML = computerScore;
+
+//Results//
+let result = document.getElementById('result');
+result.innerHTML = "You Won this round"
+if((playerScore=='5')&&(computerScore!== '5')){
+        playerScore = 0;
+        computerScore = 0;
+        result.innerHTML = "You won the Game"
+}
+else if((playerScore== '5')&&(computerScore=='5')){
+       playerScore = 0;
+       computerScore = 0;
+       result.innerHTML = " Game ends in a Draw"
+}
+else if ((playerScore!== '5')&&(computerScore== '5')){
+       playerScore = 0;
+       computerScore = 0;
+       result.innerHTML = " Computer Won the Game"
+  
+} 
+       
+ }
+ else if ((playerSelection === "Scissor")&&(computerSelection==="Rock")){
+        computerScore++;
+//Score Display//
+let playScoreDisplay = document.getElementById('yourScore');
+playScoreDisplay.innerHTML = playerScore;
+
+let computerScoreDisplay = document.getElementById('computerScore');
+computerScoreDisplay.innerHTML = computerScore;
+//Results//
+let result = document.getElementById('result');
+result.innerHTML = "Computer Won this round"
+
+if((playerScore=='5')&&(computerScore!== '5')){
+        playerScore = 0;
+        computerScore = 0;
+        result.innerHTML = "You won the Game"
+}
+else if((playerScore== '5')&&(computerScore=='5')){
+       playerScore = 0;
+       computerScore = 0;
+       result.innerHTML = " Game ends in a Draw"
+}
+else if ((playerScore!== '5')&&(computerScore== '5')){
+       playerScore = 0;
+       computerScore = 0;
+       result.innerHTML = " Computer Won the Game"
+  
+} 
+     
+ }
 //player chooses paper//
-else if ((playerSelection === "paper")&&(computerSelection==="rock")){
-        playerScore ++;} 
-else if ((playerSelection === "paper")&&(computerSelection==="scissor")){
-        computerScore++;}
+ else if ((playerSelection === "Paper")&&(computerSelection==="Rock")){
+        playerScore ++;
+//Score Display//
+let playScoreDisplay = document.getElementById('yourScore');
+playScoreDisplay.innerHTML = playerScore;
+
+let computerScoreDisplay = document.getElementById('computerScore');
+computerScoreDisplay.innerHTML = computerScore;
+//Results//
+
+let result = document.getElementById('result');
+result.innerHTML = "You Won this round"
+
+if((playerScore=='5')&&(computerScore!== '5')){
+        playerScore = 0;
+        computerScore = 0;
+        result.innerHTML = "You won the Game"
+}
+else if((playerScore== '5')&&(computerScore=='5')){
+       playerScore = 0;
+       computerScore = 0;
+       result.innerHTML = " Game ends in a Draw"
+}
+else if ((playerScore!== '5')&&(computerScore== '5')){
+       playerScore = 0;
+       computerScore = 0;
+       result.innerHTML = " Computer Won the Game"
+  
+} 
+        
+ } 
+ else if ((playerSelection === "Paper")&&(computerSelection==="Scissor")){
+        computerScore++;
+//Score Display//
+let playScoreDisplay = document.getElementById('yourScore');
+playScoreDisplay.innerHTML = playerScore;
+
+let computerScoreDisplay = document.getElementById('computerScore');
+computerScoreDisplay.innerHTML = computerScore;
+
+//Results//
+let result = document.getElementById('result');
+result.innerHTML = "Computer Won this round"
+
+if((playerScore=='5')&&(computerScore!== '5')){
+        playerScore = 0;
+        computerScore = 0;
+        result.innerHTML = "You won the Game"
+}
+else if((playerScore== '5')&&(computerScore=='5')){
+       playerScore = 0;
+       computerScore = 0;
+       result.innerHTML = " Game ends in a Draw"
+}
+else if ((playerScore!== '5')&&(computerScore== '5')){
+       playerScore = 0;
+       computerScore = 0;
+       result.innerHTML = "Computer Won the Game"
+  
+} 
+     
+ }
 }           
